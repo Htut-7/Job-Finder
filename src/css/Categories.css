@@ -1,0 +1,125 @@
+.categories-section{
+    width:90%;
+    max-width:1300px;
+    margin:120px auto;
+}
+
+.categories-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:45px;
+}
+
+.categories-header h2{
+    font-size:2.6rem;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.categories-header p{
+    color:#64748b;
+    font-size:1rem;
+    max-width:500px;
+    line-height:1.8;
+}
+
+.category-view-btn{
+    padding:14px 24px;
+    border:none;
+    border-radius:14px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.category-view-btn:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    border-radius:24px;
+    padding:35px 30px;
+    transition:0.3s;
+    border:1px solid #f1f5f9;
+    box-shadow:0 10px 30px rgba(15,23,42,0.04);
+    cursor:pointer;
+}
+
+.category-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(15,23,42,0.08);
+}
+
+.category-icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    background:#eff6ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2563eb;
+    font-size:1.7rem;
+    margin-bottom:22px;
+}
+
+.category-card h3{
+    color:#0f172a;
+    font-size:1.2rem;
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+.category-card span{
+    color:#64748b;
+    font-size:0.95rem;
+}
+
+@media(max-width:950px){
+
+    .categories-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .categories-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .categories-header h2{
+        font-size:2rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .categories-section{
+        width:94%;
+    }
+
+    .categories-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-card{
+        padding:28px 24px;
+    }
+
+}

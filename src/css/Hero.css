@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f7fb;
+}
+
+.hero-section{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(255,255,255,0.55),
+    rgba(255,255,255,0.75)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1974&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px;
+    position:relative;
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+    z-index:2;
+}
+
+.hero-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.65);
+}
+
+.hero-badge{
+    width:fit-content;
+    margin:auto;
+    margin-bottom:28px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 18px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    border-radius:999px;
+    color:#374151;
+    font-size:0.9rem;
+    font-weight:500;
+    border:1px solid rgba(255,255,255,0.5);
+}
+
+.hero-content h1{
+    font-size:4.5rem;
+    line-height:1.1;
+    color:#111827;
+    font-weight:700;
+
+    margin-bottom:24px;
+}
+
+.hero-content h1 span{
+    color:#2563eb;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#4b5563;
+}
+
+.hero-search{
+    width:100%;
+    max-width:760px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:14px;
+    background:white;
+    border-radius:70px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+.search-input{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:0 18px;
+}
+
+.search-input svg{
+    font-size:1.2rem;
+    color:#6b7280;
+}
+
+.search-input input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:1rem;
+    color:#111827;
+    background:transparent;
+}
+
+.hero-search button{
+    border:none;
+    outline:none;
+    padding:18px 34px;
+    border-radius:999px;
+    background:#111827;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.hero-search button:hover{
+    background:#2563eb;
+    transform:translateY(-2px);
+}
+
+@media(max-width:900px){
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .hero-search{
+        flex-direction:column;
+        border-radius:30px;
+    }
+
+    .hero-search button{
+        width:100%;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-content h1{
+        font-size:2.3rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .hero-badge{
+        font-size:0.8rem;
+    }
+}

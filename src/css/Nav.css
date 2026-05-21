@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+.nav-wrapper{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.nav-bar{
+    max-width:1200px;
+    margin:auto;
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.logo{
+    text-decoration:none;
+    font-size:1.7rem;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.logo-span{
+    color:#2563eb;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    list-style:none;
+}
+
+.nav-item{
+    text-decoration:none;
+    color:#475569;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 18px;
+    border-radius:14px;
+    font-size:0.95rem;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.nav-item:hover{
+    background:#f1f5f9;
+    color:#2563eb;
+}
+
+.nav-item.active{
+    background:#eff6ff;
+    color:#2563eb;
+}
+
+.nav-action{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.login{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:600;
+    font-size:0.95rem;
+}
+
+.register,
+.logout{
+    height:46px;
+    padding:0 18px;
+    border:none;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:0.94rem;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.register{
+    background:#2563eb;
+    color:white;
+}
+
+.register:hover{
+    background:#1d4ed8;
+}
+
+.logout-btn{
+    height:46px;
+    padding:0 18px;
+    border:none;
+    border-radius:14px;
+    background:#ef4444;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+    font-size:0.94rem;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+    box-shadow:0 12px 20px rgba(239,68,68,0.2);
+}
+
+.logout-btn svg{
+    font-size:1rem;
+}
+
+.menu-btn{
+    width:46px;
+    height:46px;
+    border:none;
+    border-radius:12px;
+    background:#f8fafc;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:1.3rem;
+    color:#0f172a;
+}
+
+.mobile-menu{
+    display:none;
+}
+
+@media(max-width:900px){
+
+    .nav-links,
+    .nav-action{
+        display:none;
+    }
+
+    .menu-btn{
+        display:flex;
+    }
+
+    .mobile-menu{
+        width:100%;
+
+        background:white;
+
+        border-top:1px solid #e2e8f0;
+
+        padding:20px;
+
+        display:none;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+    }
+
+    .mobile-item{
+        text-decoration:none;
+        color:#334155;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:14px 16px;
+        border-radius:14px;
+        font-weight:500;
+        transition:0.3s ease;
+    }
+
+    .mobile-item:hover{
+        background:#f1f5f9;
+    }
+
+    .mobile-login,
+    .mobile-register,
+    .mobile-logout{
+        height:50px;
+
+        border:none;
+        border-radius:14px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:10px;
+
+        text-decoration:none;
+
+        font-weight:600;
+
+        cursor:pointer;
+    }
+
+    .mobile-login{
+        background:#eff6ff;
+        color:#2563eb;
+    }
+
+    .mobile-register{
+        background:#2563eb;
+        color:white;
+    }
+
+   .mobile-logout{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:14px;
+    background:#ef4444;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    cursor:pointer;
+    font-size:0.95rem;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.mobile-logout:hover{
+    background:#dc2626;
+}
+}

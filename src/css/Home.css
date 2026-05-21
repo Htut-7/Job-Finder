@@ -1,0 +1,41 @@
+.home-page{
+    width:100%;
+    overflow:hidden;
+    background:#f8fafc;
+}
+
+.home-content{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+    padding-bottom:120px;
+}
+
+.section-container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+@media(max-width:900px){
+
+    .home-content{
+        gap:90px;
+        padding-bottom:90px;
+    }
+
+    .section-container{
+        width:94%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .home-content{
+        gap:70px;
+        padding-bottom:70px;
+    }
+
+}   
